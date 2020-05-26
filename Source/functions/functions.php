@@ -9,6 +9,10 @@ function loadTemplate(string $view, $data = []){
     $twig = new \Twig\Environment((new \Twig\Loader\FilesystemLoader('Source/App/Views/')),
      ['debug' => false]);
 
+     $twig->addGlobal('BASE_CSS', BASE_CSS);
+     $twig->addGlobal('BASE_CSS_BOOTSTRAP', BASE_CSS_BOOTSTRAP);
+     $twig->addGlobal('BASE_JAVASCRIPT', BASE_JAVASCRIPT);
+     
     //O método render ira rederizar o template. /$Dev. Andre 25-04-20/
     //Passe apenas o nome do template é o dados para o template. /$Dev. Andre 25-04-20/
 
